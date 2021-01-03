@@ -1,3 +1,12 @@
+const postCssConfigs = require('./postcss.config');
+
 module.exports = {
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: postCssConfigs.plugins,
+      },
+    },
+  ],
 };
